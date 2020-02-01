@@ -16,6 +16,7 @@ def startSearching(url_base, leng, thread_name):
         url = url_base + id
         resp = requests.get(url)
         CHECKED += 1
+        print(CHECKED)
         if resp.status_code == 200:
             print(url)
 #             with open('result.txt', 'a') as file:
