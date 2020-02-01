@@ -17,9 +17,9 @@ def startSearching(url_base, leng, thread_name):
         resp = requests.get(url)
         CHECKED += 1
         if resp.status_code == 200:
-            # print(url)
-            with open('result.txt', 'a') as file:
-                file.writelines(url + "\n")
+            print(url)
+#             with open('result.txt', 'a') as file:
+#                 file.writelines(url + "\n")
 
     
 def stats():
@@ -43,9 +43,9 @@ def test(url):
     resp = requests.get(url)
     print(resp)
 
-genThreads("https://pastr.io/view/", 6, 10)
+# genThreads("https://pastr.io/view/", 6, 10)
 
-# startSearching("https://pastr.io/view/", 6)
+startSearching("https://pastr.io/view/", 6, "default")
 # test("https://pastr.io/view/1nXTMs")
 
 # https://pastr.io/view/1nXTMI
