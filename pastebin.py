@@ -43,9 +43,9 @@ def test(url):
     resp = requests.get(url)
     print(resp)
 
-genThreads("https://pastr.io/view/", 6, 18)
+# genThreads("https://pastr.io/view/", 6, 18)
 
-# startSearching("https://pastr.io/view/", 6)
+startSearching("https://pastr.io/view/", 6)
 # test("https://pastr.io/view/1nXTMs")
 
 # https://pastr.io/view/1nXTMI
