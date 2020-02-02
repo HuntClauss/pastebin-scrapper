@@ -1,1 +1,2 @@
-bot: python pastebin.py
+web: python pastebin.py
+heroku ps:scale web=1
