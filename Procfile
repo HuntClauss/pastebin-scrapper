@@ -1,1 +1,1 @@
-web: python pastebin.py
+bot: python pastebin.py
