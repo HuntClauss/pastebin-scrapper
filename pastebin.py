@@ -6,6 +6,10 @@ import time
 
 CHECKED = 0
 
+def sendToServer(link):
+    data = {"password": "salomona312", "data": link}
+    requests.post("http://huntclauss.com.pl/api/pastebin.php")
+
 def generateID(length=8):
     return ''.join([random.choice(string.ascii_letters + string.digits) for _ in range(length)])
 
@@ -16,13 +20,13 @@ def startSearching(url_base, leng, thread_name):
         url = url_base + id
         resp = requests.get(url)
         CHECKED += 1
-#         print(CHECKED)
         if resp.status_code == 200:
-            print(url)
-#             with open('result.txt', 'a') as file:
-#                 file.writelines(url + "\n")
+            sendToServer(url)
+            # print(url)
+            # with open('result.txt', 'a') as file:
+            #     file.writelines(url + "\n")
 
-    
+
 def stats():
     global CHECKED
     before_stat = 0
@@ -44,9 +48,10 @@ def test(url):
     resp = requests.get(url)
     print(resp)
 
-genThreads("https://pastr.io/view/", 6, 20)
 
-# startSearching("https://pastr.io/view/", 6, "default")
+genThreads("https://pastr.io/view/", 6, 16)
+
+# startSearching("https://pastr.io/view/", 6)
 # test("https://pastr.io/view/1nXTMs")
 
 # https://pastr.io/view/1nXTMI
