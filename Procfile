@@ -1,1 +1,1 @@
-web: python pastebin.py $PORT
+bot: python pastebin.py
