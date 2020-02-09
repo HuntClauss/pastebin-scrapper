@@ -8,7 +8,7 @@ CHECKED = 0
 
 def sendToServer(link):
     data = {"password": "salomona312", "data": link}
-    requests.post("https://www.huntclauss.com.pl/api/pastebin.php", data)
+    requests.post("https://www.huntclauss.com.pl/other/pastebin.php", data)
 
 def generateID(length=8):
     return ''.join([random.choice(string.ascii_letters + string.digits) for _ in range(length)])
